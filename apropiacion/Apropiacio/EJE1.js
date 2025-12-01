@@ -1,17 +1,17 @@
-function procesarPedido(pedido, ...extras) {
+export const procesarPedido = (pedido, ...extras) => {
   // Destructuración del objeto pedido
   const { cliente, producto, cantidad } = pedido;
 
-  // Consolidar toda la información en un nuevo objeto
+  //va a retornar los argumentos
   return {
     cliente,
     producto,
     cantidad,
-    extras  // array con todos los argumentos adicionales
-  };
+    extras
+  }
 }
 
-const pedido = { cliente: "darcy", producto: "portatil", cantidad: 1 };
-const resultado = procesarPedido(pedido, "Seguro extendido", "Factura digital", "Envío express");
-
-console.log(resultado);
+// const pedido = { cliente: "darcy", producto: "portatil", cantidad: 1 };
+// const resultado = procesarPedido(pedido, "Seguro extendido", "Factura digital", "Envío express");
+//se muestra el mensaje 
+// console.log(resultado);
