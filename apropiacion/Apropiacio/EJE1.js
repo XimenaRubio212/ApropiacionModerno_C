@@ -1,4 +1,4 @@
-export const procesarPedido = (pedido, ...extras) => {
+const procesarPedido = (pedido, ...extras) => {
   // Destructuración del objeto pedido
   const { cliente, producto, cantidad } = pedido;
 
